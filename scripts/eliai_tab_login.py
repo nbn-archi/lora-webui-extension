@@ -43,7 +43,7 @@ def on_ui_tabs():
                     )
                     login_check_btn.click(fn=login_check, outputs=title)
             # TODO: add more UI components (cf. https://gradio.app/docs/#components)
-        return [(ui_component, "EliAI", "extension_template_tab")]
+        return [(ui_component, "NBN-Archi", "extension_template_tab")]
      
 def login(token_input):
     result = eliai_auth.login(token_input)
@@ -62,7 +62,7 @@ def logout(token_input):
 def login_check():
     token = read_user_token()
     if not token:
-        return gr.update(value="**Vui lòng đăng nhập để sử dụng lora EliAI**")
+        return gr.update(value="**Vui lòng đăng nhập để sử dụng lora NBN-Archi**")
     else:
         return gr.update(value="**Đã đăng nhập thành công,bạn có thể sử dụng bình thường**")
 

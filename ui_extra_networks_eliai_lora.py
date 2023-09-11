@@ -10,7 +10,7 @@ from ui_edit_user_metadata import LoraUserMetadataEditor
 
 class ExtraNetworksPageEliAILora(ui_extra_networks.ExtraNetworksPage):
     def __init__(self):
-        super().__init__('EliAI Lora')
+        super().__init__('NBN-Archi')
 
     def refresh(self):
         networks_eliai.list_available_networks()
